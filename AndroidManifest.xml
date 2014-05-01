@@ -14,8 +14,32 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.hallut.e_kvitto.Login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="com.hallut.e_kvitto.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.hallut.e_kvitto.Home"
-            android:label="@string/title_activity_home" >
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.hallut.e_kvitto.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hallut.e_kvitto.StartingSplash"
+            android:label="@string/title_activity_starting_splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
