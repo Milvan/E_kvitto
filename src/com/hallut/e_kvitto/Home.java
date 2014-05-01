@@ -27,7 +27,8 @@ public class Home extends Activity {
 	private void loadInfo(){
 		back = new HomeBackend();
 		try{
-			back.loadInfo();
+			String user = this.getIntent().getExtras().getString("user");
+			back.loadInfo(user);
 		} catch(Exception e){
 			e.printStackTrace();
 		}
@@ -47,8 +48,8 @@ public class Home extends Activity {
 	public void onClick(View arg){
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.
-		case R.id.imageButton1:
-			break;
+		//case R.id.imageButton1:
+			//break;
 			default:
 		}
 	}

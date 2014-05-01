@@ -73,7 +73,12 @@ public class Database {
 	 * @return A list of the users credit cards.
 	 */
 	public LinkedList<CreditCard> getCards(String userID){
-		return cards.get(userID);
+		LinkedList<CreditCard> cardList = cards.get(userID);
+		if (cardList!=null){
+			return cardList;
+		} else {
+			return new LinkedList<CreditCard>();
+		}
 	}
 	
 	/**

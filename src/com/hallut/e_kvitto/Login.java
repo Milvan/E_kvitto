@@ -219,7 +219,11 @@ public class Login extends Activity {
 			showProgress(false);
 
 			if (success) {
-				Intent homeScreen = new Intent("com.hallut.e_kvitto.HOME");
+				String username = mEmailView.getText().toString();
+				Bundle bun = new Bundle();
+				bun.putString("user", username);
+				Intent homeScreen = new Intent(Login.this, Home.class);
+				homeScreen.putExtras(bun);
 				startActivity(homeScreen);
 			} else {
 				mPasswordView

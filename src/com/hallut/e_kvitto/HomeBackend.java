@@ -23,8 +23,8 @@ public class HomeBackend {
 	/**
 	 * Loads info from the database, stores in local variables.
 	 */
-	public void loadInfo(){
-		getCards();
+	public void loadInfo(String user){
+		getCards(user);
 		
 		cardIterator = cards.iterator();
 		try{
@@ -64,9 +64,9 @@ public class HomeBackend {
 	/**
 	 * Gets credit cards from database and stores in local cards[].
 	 */
-	private void getCards(){
+	private void getCards(String user){
 		//connect to db
-		cards = db.getCards("test@");// query for cards
+		cards = db.getCards(user);// query for cards
 		//close/disconnect from db
 	}
 }
