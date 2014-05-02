@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hallut.e_kvitto.Home"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/home1" >
 
     <TextView
         android:id="@+id/infoDisplay"
@@ -13,6 +14,12 @@
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:text="Button" 
+        android:background="@android:color/transparent"/>
 
 </FrameLayout>
 
