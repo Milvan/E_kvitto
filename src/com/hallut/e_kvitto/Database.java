@@ -35,7 +35,7 @@ public class Database {
 		LinkedList<CreditCard> list = new LinkedList<CreditCard>();
 		list.add(new CreditCard("5295768101681568", "Pelle Svanslös", 1 ,16, 654, "MasterCard", "Ticket Rikskortet"));
 		list.add(new CreditCard("4865135008460565", "Pelle Svanslös", 8, 16, 785, "Visa", "SEB", "IVaE Consultants"));
-		cards.put("test@", list);
+		cards.put("1234567890", list);
 		
 		LinkedList<CreditCard> list2 = new LinkedList<CreditCard>();
 		list2.add(new CreditCard("7865156765820645", "Maja Gräddnos", 2, 15, 657, "American Express", "Amex"));
@@ -45,7 +45,7 @@ public class Database {
 	private void fillReceipts(){
 		LinkedList<Receipt> receiptList = new LinkedList<Receipt>();
 		
-		CreditCard card = cards.get("test@").getFirst();
+		CreditCard card = cards.get("1234567890").getFirst();
 		String date = "2014-04-22";
 		Article[] articles1 = new Article[]{new Article("Mellanmjölk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
 		receiptList.add(new Receipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1));
