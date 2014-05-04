@@ -17,9 +17,9 @@
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:text="Button" 
-        android:background="@android:color/transparent"/>
+        android:layout_height="94dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick" />
 
 </FrameLayout>
 

@@ -1094,11 +1094,11 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f050023;
         public static final int action_bar_title=0x7f050022;
         public static final int action_context_bar=0x7f05001d;
-        public static final int action_forgot_password=0x7f050047;
+        public static final int action_forgot_password=0x7f050048;
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050046;
+        public static final int action_settings=0x7f050047;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1122,6 +1122,7 @@ containing a value of this type.
         public static final int image=0x7f050027;
         public static final int infoDisplay=0x7f05003d;
         public static final int listMode=0x7f050001;
+        public static final int listView1=0x7f050046;
         public static final int list_item=0x7f050029;
         public static final int login=0x7f050044;
         public static final int login_form=0x7f050041;
@@ -1211,10 +1212,11 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_home=0x7f030018;
         public static final int activity_login=0x7f030019;
-        public static final int activity_starting_splash=0x7f03001a;
-        public static final int fragment_home=0x7f03001b;
-        public static final int fragment_starting_splash=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int activity_receiptlist=0x7f03001a;
+        public static final int activity_starting_splash=0x7f03001b;
+        public static final int fragment_home=0x7f03001c;
+        public static final int fragment_starting_splash=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int home=0x7f0c0000;

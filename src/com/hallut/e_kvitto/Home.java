@@ -1,7 +1,9 @@
 package com.hallut.e_kvitto;
 
 import java.util.EmptyStackException;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -48,7 +50,9 @@ public class Home extends Activity {
 	public void onClick(View arg){
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.
-		//case R.id.imageButton1:
+		case R.id.button1:
+			Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
+			startActivity(receiptListScreen);
 			//break;
 			default:
 		}
