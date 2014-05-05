@@ -28,7 +28,7 @@ public class Home extends Activity {
 	}
 	
 	private void loadInfo(){
-		back = new HomeBackend();
+		back = HomeBackend.getHomeBackend();
 		try{
 			String user = this.getIntent().getExtras().getString("user");
 			back.loadInfo(user);

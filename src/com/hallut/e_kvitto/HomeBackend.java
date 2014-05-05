@@ -5,8 +5,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 
-public class HomeBackend {
+public final class HomeBackend {
 
+	private static HomeBackend HB;
+	
 	private LinkedList<CreditCard> cards; // can be empty if no credit cards exists on user.
 	private CreditCard currentCard; //can be null if no creditcards exist on user
 	private Iterator<CreditCard> cardIterator;
@@ -16,9 +18,24 @@ public class HomeBackend {
 	 * Sets up a backend precessor for the HomeScreen.
 	 * @param c
 	 */
-	public HomeBackend(){
+	private HomeBackend(){
 		db = Database.getDatabase();
 	}
+	
+	/**
+	 * Returns this HomeBackend object
+	 * @return This unique HomeBackend object.
+	 */
+	public static HomeBackend getHomeBackend(){
+		if(HB!=null){
+			return HB;
+		}else {
+			HB = new HomeBackend();
+			return HB;
+		}
+			
+	}
+	
 	
 	/**
 	 * Loads info from the database, stores in local variables.
@@ -36,17 +53,12 @@ public class HomeBackend {
 	}
 
 	/**
-	 * Gets a String description of the users current card.
-	 * @return A String representation of the next credit card. Null if there is no current card selected.
+	 * Gets the current selected card
+	 * @return The credit card that is currently selected.
 	 */
-	public String getCurrentCard(){
-		if(currentCard!=null){
-			return currentCard.toString();
-		}
-		else {
-			return null;
-		}
-		
+	public CreditCard getCurrentCard(){
+			return currentCard;
+	
 	}
 	
 	/**
