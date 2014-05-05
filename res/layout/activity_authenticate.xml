@@ -1,0 +1,129 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hallut.e_kvitto.Authenticate"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/authenticate"
+    >
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/auth_pass"
+            android:layout_width="275dp"
+            android:layout_height="49dp"
+            android:layout_x="23dp"
+            android:layout_y="178dp"
+            android:textColor="#000000"
+            android:ems="10" >
+        </EditText>
+        
+        <Button
+            android:id="@+id/num1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_x="30dp"
+            android:layout_y="276dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+        
+        <Button
+            android:id="@+id/num2"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_x="124dp"
+            android:layout_y="276dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num3"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_x="214dp"
+            android:layout_y="279dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num4"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_x="29dp"
+            android:layout_y="325dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num5"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_x="124dp"
+            android:layout_y="329dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num6"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_x="214dp"
+            android:layout_y="330dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num7"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_x="28dp"
+            android:layout_y="379dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num8"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_x="124dp"
+            android:layout_y="380dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num9"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_x="216dp"
+            android:layout_y="383dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/num0"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_x="124dp"
+            android:layout_y="435dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/auth"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_x="215dp"
+            android:layout_y="436dp"
+            android:onClick="onClick"
+            android:background="@android:color/transparent" />
+
+
+    </AbsoluteLayout>
+
+</FrameLayout>
+
+
