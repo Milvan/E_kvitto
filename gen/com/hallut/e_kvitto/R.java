@@ -1273,6 +1273,7 @@ containing a value of this type.
         public static final int error_incorrect_password=0x7f0a001b;
         public static final int error_invalid_email=0x7f0a0019;
         public static final int error_invalid_password=0x7f0a001a;
+        public static final int error_invalid_securitynumber=0x7f0a001d;
         public static final int hello_world=0x7f0a000f;
         public static final int login_progress_signing_in=0x7f0a0018;
         /**  Strings related to login 
