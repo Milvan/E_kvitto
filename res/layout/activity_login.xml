@@ -38,26 +38,21 @@
 
         <LinearLayout
             style="@style/LoginFormContainer"
+            android:layout_height="220dp"
             android:orientation="vertical" >
 
-            <EditText
-                android:id="@+id/email"
+            <TextView
+                android:textSize="22sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:singleLine="true" />
+                android:text="@string/security_number" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/security_number"
+                android:inputType="numberSigned"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified"
-                android:inputType="textPassword"
+                android:hint="@string/prompt_security_number"
                 android:maxLines="1"
                 android:singleLine="true" />
 

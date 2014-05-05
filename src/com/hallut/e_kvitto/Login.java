@@ -20,17 +20,7 @@ import android.widget.TextView;
  * well.
  */
 public class Login extends Activity {
-	/**
-	 * A dummy authentication store containing known user names and passwords.
-	 * TODO: remove after connecting to a real authentication system.
-	 */
-	private static final String[] DUMMY_CREDENTIALS = new String[] {
-			"foo@example.com:hello", "bar@example.com:world", "test@:test" };
-
-	/**
-	 * The default email to populate the email field with.
-	 */
-	public static final String EXTRA_EMAIL = "com.example.android.authenticatordemo.extra.EMAIL";
+	
 
 	/**
 	 * Keep track of the login task to ensure we can cancel it if requested.
@@ -38,12 +28,10 @@ public class Login extends Activity {
 	private UserLoginTask mAuthTask = null;
 
 	// Values for email and password at the time of the login attempt.
-	private String mEmail;
-	private String mPassword;
+	private String mSecurityNumber;
 
 	// UI references.
-	private EditText mEmailView;
-	private EditText mPasswordView;
+	private EditText mSecurityNumberView;
 	private View mLoginFormView;
 	private View mLoginStatusView;
 	private TextView mLoginStatusMessageView;
@@ -55,23 +43,18 @@ public class Login extends Activity {
 		setContentView(R.layout.activity_login);
 
 		// Set up the login form.
-		mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
-		mEmailView = (EditText) findViewById(R.id.email);
-		mEmailView.setText(mEmail);
-
-		mPasswordView = (EditText) findViewById(R.id.password);
-		mPasswordView
-				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-					@Override
-					public boolean onEditorAction(TextView textView, int id,
-							KeyEvent keyEvent) {
-						if (id == R.id.login || id == EditorInfo.IME_NULL) {
-							attemptLogin();
-							return true;
-						}
-						return false;
-					}
-				});
+		mSecurityNumberView = (EditText) findViewById(R.id.security_number);
+		mSecurityNumberView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+			@Override
+			public boolean onEditorAction(TextView textView, int id,
+					KeyEvent keyEvent) {
+				if (id == R.id.security_number || id == EditorInfo.IME_NULL) {
+					attemptLogin();
+					return true;
+				}
+				return false;
+			}
+		});
 
 		mLoginFormView = findViewById(R.id.login_form);
 		mLoginStatusView = findViewById(R.id.login_status);
@@ -98,35 +81,23 @@ public class Login extends Activity {
 		}
 
 		// Reset errors.
-		mEmailView.setError(null);
-		mPasswordView.setError(null);
+		mSecurityNumberView.setError(null);
 
 		// Store values at the time of the login attempt.
-		mEmail = mEmailView.getText().toString();
-		mPassword = mPasswordView.getText().toString();
+		mSecurityNumber = mSecurityNumberView.getText().toString();
 
 		boolean cancel = false;
 		View focusView = null;
 
-		// Check for a valid password.
-		if (TextUtils.isEmpty(mPassword)) {
-			mPasswordView.setError(getString(R.string.error_field_required));
-			focusView = mPasswordView;
-			cancel = true;
-		} else if (mPassword.length() < 2) {
-			mPasswordView.setError(getString(R.string.error_invalid_password));
-			focusView = mPasswordView;
-			cancel = true;
-		}
 
 		// Check for a valid email address.
-		if (TextUtils.isEmpty(mEmail)) {
-			mEmailView.setError(getString(R.string.error_field_required));
-			focusView = mEmailView;
+		if (TextUtils.isEmpty(mSecurityNumber)) {
+			mSecurityNumberView.setError(getString(R.string.error_field_required));
+			focusView = mSecurityNumberView;
 			cancel = true;
-		} else if (mEmail.contains("\\s") || mEmail.length()!=12) {
-			mEmailView.setError(getString(R.string.error_invalid_securitynumber));
-			focusView = mEmailView;
+		} else if (mSecurityNumber.contains("\\s") || mSecurityNumber.length()!=12) {
+			mSecurityNumberView.setError(getString(R.string.error_invalid_securitynumber));
+			focusView = mSecurityNumberView;
 			cancel = true;
 		}
 
@@ -200,17 +171,8 @@ public class Login extends Activity {
 			} catch (InterruptedException e) {
 				return false;
 			}
-
-//			for (String credential : DUMMY_CREDENTIALS) {
-//				String[] pieces = credential.split(":");
-////				if (pieces[0].equals(mEmail)) {
-////					// Account exists, return true if the password matches.
-////					return pieces[1].equals(mPassword);
-////				}
-//				if(pieces[0].matches("\\S+")){
-//					return true;
-//				}
-//			}
+			
+			//Authenticate
 
 			return true;
 		}
@@ -221,16 +183,12 @@ public class Login extends Activity {
 			showProgress(false);
 
 			if (success) {
-				String username = mEmailView.getText().toString();
+				String username = mSecurityNumberView.getText().toString();
 				Bundle bun = new Bundle();
 				bun.putString("user", username);
 				Intent homeScreen = new Intent(Login.this, Home.class);
 				homeScreen.putExtras(bun);
 				startActivity(homeScreen);
-			} else {
-				mPasswordView
-						.setError(getString(R.string.error_incorrect_password));
-				mPasswordView.requestFocus();
 			}
 		}
 
