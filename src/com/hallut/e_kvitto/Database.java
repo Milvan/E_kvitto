@@ -9,15 +9,14 @@ import java.util.LinkedList;
  * @author Marcus
  *
  */
-public class Database {
+public final class Database {
 	
 	private static Database DB;
 	
 	//TABLES
-	// Credit cards mapped on userID Hashmap<userID, CreditCard[]> better with non-array, gotta be possible to add more cards delete. nn finding cards.Iterate will be fine.
 	private HashMap<String, LinkedList<CreditCard>> cards;
-	// Receipts mapped on credit cards
 	private HashMap<CreditCard, LinkedList<Receipt>> receipts;
+	
 	
 	
 	private Database(){
@@ -31,26 +30,28 @@ public class Database {
 		fillReceipts();
 	}
 	
+	/**
+	 * This method will fill the database with static credit card information.
+	 */
 	private void fillCards(){
 		LinkedList<CreditCard> list = new LinkedList<CreditCard>();
 		list.add(new CreditCard("5295768101681568", "Pelle Svanslös", 1 ,16, 654, "MasterCard", "Ticket Rikskortet"));
 		list.add(new CreditCard("4865135008460565", "Pelle Svanslös", 8, 16, 785, "Visa", "SEB", "IVaE Consultants"));
-		cards.put("1234567890", list);
+		cards.put("123456789012", list);
 		
 		LinkedList<CreditCard> list2 = new LinkedList<CreditCard>();
 		list2.add(new CreditCard("7865156765820645", "Maja Gräddnos", 2, 15, 657, "American Express", "Amex"));
 		cards.put("foo@example.com", list2);
 	}
 	
+	/**
+	 * This method will fill the database with static receipt information.
+	 */
 	private void fillReceipts(){
-		LinkedList<Receipt> receiptList = new LinkedList<Receipt>();
-		
-		CreditCard card = cards.get("1234567890").getFirst();
+		CreditCard card = cards.get("123456789012").getFirst();
 		String date = "2014-04-22";
 		Article[] articles1 = new Article[]{new Article("Mellanmjölk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
-		receiptList.add(new Receipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1));
-		
-		receipts.put(card, receiptList);
+		addReceipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1);
 	}
 	
 	/**
@@ -88,6 +89,36 @@ public class Database {
 	 */
 	public LinkedList<Receipt> getReceipts(CreditCard card){
 		return receipts.get(card);
+	}
+	
+	/**
+	 * Add a new receipt to the Database.
+	 * @param id
+	 * @param company
+	 * @param date
+	 * @param time
+	 * @param sellerID
+	 * @param terminalID
+	 * @param card
+	 * @param articles
+	 * @return true if receipt was successfully added, else false.
+	 */
+	public boolean addReceipt(long id, String company, String date, String time, String sellerID, String terminalID, CreditCard card, Article[] articles){
+		if(card==null){
+			return false;
+		}
+		LinkedList<Receipt> rec = receipts.get(card.getCardNumber());
+		if (rec==null){
+			rec = new LinkedList<Receipt>();
+			rec.add(new Receipt(id, company, date, time, sellerID, terminalID, card, articles));
+			
+			receipts.put(card, rec);
+			return true;
+		} else {
+			rec.add(new Receipt(id, company, date, time, sellerID, terminalID, card, articles));
+			receipts.put(card, rec);
+			return true;
+		}
 	}
 	
 

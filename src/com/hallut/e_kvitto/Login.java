@@ -88,7 +88,7 @@ public class Login extends Activity {
 
 
 	/**
-	 * Attempts to sign in or register the account specified by the login form.
+	 * Attempts to sign in by the login form.
 	 * If there are form errors (invalid email, missing fields, etc.), the
 	 * errors are presented and no actual login attempt is made.
 	 */
@@ -113,7 +113,7 @@ public class Login extends Activity {
 			mPasswordView.setError(getString(R.string.error_field_required));
 			focusView = mPasswordView;
 			cancel = true;
-		} else if (mPassword.length() < 4) {
+		} else if (mPassword.length() < 2) {
 			mPasswordView.setError(getString(R.string.error_invalid_password));
 			focusView = mPasswordView;
 			cancel = true;
@@ -124,11 +124,11 @@ public class Login extends Activity {
 			mEmailView.setError(getString(R.string.error_field_required));
 			focusView = mEmailView;
 			cancel = true;
-		} //else if (!mEmail.contains("@")) {
-//			mEmailView.setError(getString(R.string.error_invalid_email));
-//			focusView = mEmailView;
-//			cancel = true;
-//		}
+		} else if (mEmail.contains("\\s") || mEmail.length()!=12) {
+			mEmailView.setError(getString(R.string.error_invalid_securitynumber));
+			focusView = mEmailView;
+			cancel = true;
+		}
 
 		if (cancel) {
 			// There was an error; don't attempt login and focus the first
@@ -201,18 +201,17 @@ public class Login extends Activity {
 				return false;
 			}
 
-			for (String credential : DUMMY_CREDENTIALS) {
-				String[] pieces = credential.split(":");
-//				if (pieces[0].equals(mEmail)) {
-//					// Account exists, return true if the password matches.
-//					return pieces[1].equals(mPassword);
+//			for (String credential : DUMMY_CREDENTIALS) {
+//				String[] pieces = credential.split(":");
+////				if (pieces[0].equals(mEmail)) {
+////					// Account exists, return true if the password matches.
+////					return pieces[1].equals(mPassword);
+////				}
+//				if(pieces[0].matches("\\S+")){
+//					return true;
 //				}
-				if(pieces[0].matches("\\S+")){
-					return pieces[1].length()>1;
-				}
-			}
+//			}
 
-			// TODO: register the new account here.
 			return true;
 		}
 
