@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Home extends Activity {
 	HomeBackend back;
@@ -42,7 +43,7 @@ public class Home extends Activity {
 			back.getNextCard();
 		text.setText(back.getNextCard());
 		} catch(EmptyStackException e){
-			text.setText("No creditcards available");
+			text.setText("Inga tillgängliga kreditkort");
 		}
 	}
 	
@@ -50,10 +51,16 @@ public class Home extends Activity {
 	public void onClick(View arg){
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.
-		case R.id.button1:
-			Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
-			startActivity(receiptListScreen);
-			//break;
+			case R.id.button1:
+				if(back.getCurrentCard()!=null){
+					Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
+					startActivity(receiptListScreen);
+				} else {
+					Toast.makeText(getApplicationContext(), "Inget kreditkort valt",
+		                    Toast.LENGTH_SHORT).show();
+				}
+			break;
+			
 			default:
 		}
 	}

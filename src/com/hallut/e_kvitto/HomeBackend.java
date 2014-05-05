@@ -37,10 +37,16 @@ public class HomeBackend {
 
 	/**
 	 * Gets a String description of the users current card.
-	 * @return A String representation of the next credit card
+	 * @return A String representation of the next credit card. Null if there is no current card selected.
 	 */
 	public String getCurrentCard(){
-		return currentCard.toString();
+		if(currentCard!=null){
+			return currentCard.toString();
+		}
+		else {
+			return null;
+		}
+		
 	}
 	
 	/**
