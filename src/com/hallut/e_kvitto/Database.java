@@ -52,6 +52,7 @@ public final class Database {
 		String date = "2014-04-22";
 		Article[] articles1 = new Article[]{new Article("Mellanmj�lk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
 		addReceipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1);
+		addReceipt(2830, "Konsum", date, "19:00", "280", "6293-012010", card, articles1);
 	}
 	
 	/**

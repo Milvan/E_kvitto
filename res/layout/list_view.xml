@@ -13,14 +13,14 @@
             android:id="@+id/companyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Person Name"
+            android:text="Company Name"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1990-2001" />
+            android:text="Date 2000-01-01" />
 
     </LinearLayout>
 

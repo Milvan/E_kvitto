@@ -12,42 +12,52 @@ import android.widget.TextView;
 public class ReceiptAdapter extends BaseAdapter
 {
     
-    private Context context;
+    private Context mContext;
     private LinkedList<Receipt> rec;
+    private LayoutInflater inflater;
+	
     
-    public ReceiptAdapter(Context context,LinkedList<Receipt> list) 
+    public ReceiptAdapter(Context context,LinkedList<Receipt> receipts) 
     {
             super();
-            this.context=context;
-            rec = list;
+            mContext = context;
+            rec = receipts;
+            inflater = (LayoutInflater) mContext
+    		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    		
            
     }
-       
+      
+    @Override
     public int getCount() 
     {
         return rec.size();
     }
 
-
+    @Override
     public Object getItem(int position) {
         // TODO Auto-generated method stub
         return rec.get(position);
     }
 
+    @Override
     public long getItemId(int position) {
         // TODO Auto-generated method stub
         return rec.get(position).getID();
     }
 
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		View rowView = convertView;
+
+		if (rowView == null) {
+            rowView = inflater.inflate(R.layout.list_view, parent, false);
+
+        } 
 		
-		LayoutInflater inflater = (LayoutInflater) context
-		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		
-		rowView = inflater.inflate(R.layout.list_view, parent, false);
+		//rowView = inflater.inflate(R.layout.list_view, parent, false);
 	    TextView textView = (TextView) rowView.findViewById(R.id.companyName);
 	    TextView date = (TextView) rowView.findViewById(R.id.date);
 	    textView.setText(rec.get(position).getCompany());
