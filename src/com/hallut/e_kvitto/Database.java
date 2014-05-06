@@ -108,7 +108,7 @@ public final class Database {
 		if(card==null){
 			return false;
 		}
-		LinkedList<Receipt> rec = receipts.get(card.getCardNumber());
+		LinkedList<Receipt> rec = receipts.get(card);
 		if (rec==null){
 			rec = new LinkedList<Receipt>();
 			rec.add(new Receipt(id, company, date, time, sellerID, terminalID, card, articles));
