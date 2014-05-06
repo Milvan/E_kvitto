@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.hallut.e_kvitto.Home"
     tools:ignore="MergeRootFrame"
-    android:background="@drawable/home1" >
+    android:background="@drawable/home" >
 
     <TextView
         android:id="@+id/infoDisplay"

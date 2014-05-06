@@ -1078,12 +1078,13 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int authenticate=0x7f020057;
-        public static final int bankkort=0x7f020058;
-        public static final int home1=0x7f020059;
+        public static final int bluebackground=0x7f020058;
+        public static final int home=0x7f020059;
         public static final int ic_launcher=0x7f02005a;
-        public static final int kvitto=0x7f02005b;
-        public static final int kvittokalender=0x7f02005c;
-        public static final int kvitton=0x7f02005d;
+        public static final int login=0x7f02005b;
+        public static final int loginbackground=0x7f02005c;
+        public static final int splash=0x7f02005d;
+        public static final int whitebackground=0x7f02005e;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
