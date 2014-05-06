@@ -44,17 +44,7 @@ public class Login extends Activity {
 
 		// Set up the login form.
 		mSecurityNumberView = (EditText) findViewById(R.id.security_number);
-		mSecurityNumberView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-			@Override
-			public boolean onEditorAction(TextView textView, int id,
-					KeyEvent keyEvent) {
-				if (id == R.id.security_number || id == EditorInfo.IME_NULL) {
-					attemptLogin();
-					return true;
-				}
-				return false;
-			}
-		});
+		
 
 		mLoginFormView = findViewById(R.id.login_form);
 		mLoginStatusView = findViewById(R.id.login_status);
@@ -100,7 +90,9 @@ public class Login extends Activity {
 			focusView = mSecurityNumberView;
 			cancel = true;
 		}
-
+		
+		
+				
 		if (cancel) {
 			// There was an error; don't attempt login and focus the first
 			// form field with an error.
@@ -108,10 +100,17 @@ public class Login extends Activity {
 		} else {
 			// Show a progress spinner, and kick off a background task to
 			// perform the user login attempt.
-			mLoginStatusMessageView.setText(R.string.login_progress_signing_in);
 			showProgress(true);
-			mAuthTask = new UserLoginTask();
-			mAuthTask.execute((Void) null);
+			String username = mSecurityNumberView.getText().toString();
+			Bundle bun = new Bundle();
+			bun.putString("user", username);
+			Intent authenticate = new Intent(Login.this, Authenticate.class);
+			authenticate.putExtras(bun);
+			startActivityForResult(authenticate,1);
+//			mLoginStatusMessageView.setText(R.string.login_progress_signing_in);
+//			showProgress(true);
+//			mAuthTask = new UserLoginTask();
+//			mAuthTask.execute((Void) null);
 		}
 	}
 
@@ -180,7 +179,7 @@ public class Login extends Activity {
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			mAuthTask = null;
-			showProgress(false);
+			//showProgress(false);
 
 			if (success) {
 				String username = mSecurityNumberView.getText().toString();
@@ -196,6 +195,32 @@ public class Login extends Activity {
 		protected void onCancelled() {
 			mAuthTask = null;
 			showProgress(false);
+		}
+		
+	}
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		showProgress(false);
+	}
+	
+
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		if(requestCode==1){
+			if(resultCode==RESULT_OK){
+				System.out.println("here");
+				mLoginStatusMessageView.setText(R.string.login_progress_signing_in);
+				showProgress(true);
+				mAuthTask = new UserLoginTask();
+				mAuthTask.execute((Void) null);
+			}else {
+				
+			}
+				
 		}
 	}
 }

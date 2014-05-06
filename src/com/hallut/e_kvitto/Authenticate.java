@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class Authenticate extends Activity {
 	
-	private EditText mPass;
+	private TextView mPass;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_authenticate);
-		mPass = (EditText) findViewById(R.id.auth_pass);
+		mPass = (TextView) findViewById(R.id.view_auth_pass);
 
 	}
 
@@ -54,7 +54,8 @@ public class Authenticate extends Activity {
 				mPass.setText(mPass.getText()+"0");
 				break;
 			case R.id.auth:
-				
+				setResult(RESULT_OK);
+				finish();
 				break;
 			
 			default:
