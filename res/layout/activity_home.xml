@@ -1,24 +1,37 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hallut.e_kvitto.Home"
     tools:ignore="MergeRootFrame"
-    android:background="@drawable/home" >
-
-    <TextView
-        android:id="@+id/infoDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/button1"
+    android:background="@drawable/home" >    
+        
+		<Button
+        android:id="@+id/my_receipts"
         android:layout_width="match_parent"
         android:layout_height="94dp"
         android:background="@android:color/transparent"
         android:onClick="onClick" />
+		
+        <TextView
+            android:id="@+id/cardnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="185dp"
+            android:layout_marginLeft="45dp"
+			android:textSize="20sp"
+			 />
 
-</FrameLayout>
+        <Button
+            android:id="@+id/my_cards"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:layout_height="94dp" />
 
+</RelativeLayout>

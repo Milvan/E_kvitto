@@ -98,8 +98,7 @@ public class Login extends Activity {
 			// form field with an error.
 			focusView.requestFocus();
 		} else {
-			// Show a progress spinner, and kick off a background task to
-			// perform the user login attempt.
+			// Show a progress spinner, and start bankID authentication
 			showProgress(true);
 			String username = mSecurityNumberView.getText().toString();
 			Bundle bun = new Bundle();
@@ -107,10 +106,6 @@ public class Login extends Activity {
 			Intent authenticate = new Intent(Login.this, Authenticate.class);
 			authenticate.putExtras(bun);
 			startActivityForResult(authenticate,1);
-//			mLoginStatusMessageView.setText(R.string.login_progress_signing_in);
-//			showProgress(true);
-//			mAuthTask = new UserLoginTask();
-//			mAuthTask.execute((Void) null);
 		}
 	}
 
@@ -179,7 +174,6 @@ public class Login extends Activity {
 		@Override
 		protected void onPostExecute(final Boolean success) {
 			mAuthTask = null;
-			//showProgress(false);
 
 			if (success) {
 				String username = mSecurityNumberView.getText().toString();

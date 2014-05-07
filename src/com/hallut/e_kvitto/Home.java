@@ -38,10 +38,17 @@ public class Home extends Activity {
 	}
 	
 	private void setInfo(){
-		TextView text = (TextView) findViewById(R.id.infoDisplay);
+		TextView text = (TextView) findViewById(R.id.cardnumber);
 		try{
-			back.getNextCard();
-		text.setText(back.getNextCard());
+			String temp = back.getNextCard().getCardNumber();
+			StringBuilder cardnumber = new StringBuilder();
+			for(int i=0; i<temp.length();i++){
+				if((i%4)==0){
+					cardnumber.append("  ");
+				}
+				cardnumber.append(temp.charAt(i));
+			}
+			text.setText(cardnumber.toString());
 		} catch(EmptyStackException e){
 			text.setText("Inga tillgängliga kreditkort");
 		}
@@ -51,7 +58,7 @@ public class Home extends Activity {
 	public void onClick(View arg){
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.
-			case R.id.button1:
+			case R.id.my_receipts:
 				if(back.getCurrentCard()!=null){
 					Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
 					startActivity(receiptListScreen);
