@@ -53,6 +53,15 @@
             android:name="com.hallut.e_kvitto.Authenticate"
             android:label="@string/title_activity_authenticate" >
         </activity>
+        <activity
+            android:name="com.hallut.e_kvitto.ViewReceipt"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEWRECEIPT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
