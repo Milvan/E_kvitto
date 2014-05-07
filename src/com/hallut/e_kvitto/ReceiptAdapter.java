@@ -25,7 +25,6 @@ public class ReceiptAdapter extends BaseAdapter
             inflater = (LayoutInflater) mContext
     		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     		
-           
     }
       
     @Override

@@ -53,6 +53,10 @@
             android:name="com.hallut.e_kvitto.Authenticate"
             android:label="@string/title_activity_authenticate" >
         </activity>
+        <activity
+            android:name="com.hallut.e_kvitto.CardsView"
+            android:label="@string/title_activity_cards_view" >
+        </activity>
     </application>
 
 </manifest>

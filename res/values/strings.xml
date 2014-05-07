@@ -7,5 +7,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_starting_splash">StartingSplash</string>
     <string name="title_activity_authenticate">Authenticate</string>
+    <string name="title_activity_cards_view">CardsView</string>
 
 </resources>
