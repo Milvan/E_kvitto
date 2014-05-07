@@ -24,8 +24,6 @@ public class ReceiptAdapter extends BaseAdapter
             rec = receipts;
             inflater = (LayoutInflater) mContext
     		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    		
-           
     }
       
     @Override
@@ -54,7 +52,6 @@ public class ReceiptAdapter extends BaseAdapter
 
 		if (rowView == null) {
             rowView = inflater.inflate(R.layout.list_view, parent, false);
-
         } 
 		
 		//rowView = inflater.inflate(R.layout.list_view, parent, false);
