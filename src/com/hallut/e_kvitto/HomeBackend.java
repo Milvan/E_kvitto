@@ -66,13 +66,13 @@ public final class HomeBackend {
 	 * @return A String representation of the next credit card
 	 * @throws Throws EmptyStackException if there are no available cards for the user.
 	 */
-	public String getNextCard() throws EmptyStackException{
+	public CreditCard getNextCard() throws EmptyStackException{
 		if(cardIterator.hasNext()){
-			return cardIterator.next().toString();
+			return cardIterator.next();
 		}else{
-			cardIterator = cards.iterator();
+			cardIterator = cards.iterator(); // starts to iterate from beginning again.
 			if(cardIterator.hasNext()){
-				return cardIterator.next().toString();
+				return cardIterator.next();
 			}else {
 				throw new EmptyStackException();
 			}
