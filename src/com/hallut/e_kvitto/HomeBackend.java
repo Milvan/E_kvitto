@@ -58,7 +58,20 @@ public final class HomeBackend {
 	 */
 	public CreditCard getCurrentCard(){
 			return currentCard;
+	}
 	
+	/**
+	 * Sets the current card to the one specified.
+	 */
+	public void setCurrentCard(CreditCard card){
+		currentCard=card;
+	}
+	
+	/**
+	 * Gets the users list of cards
+	 */
+	public LinkedList<CreditCard> getUsersCards(){
+		return cards;
 	}
 	
 	/**

@@ -24,6 +24,10 @@ public class ReceiptAdapter extends BaseAdapter
             rec = receipts;
             inflater = (LayoutInflater) mContext
     		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+<<<<<<< HEAD
+=======
+    		
+>>>>>>> branch 'master' of https://github.com/Milvan/E_kvitto
     }
       
     @Override
