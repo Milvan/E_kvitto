@@ -65,12 +65,6 @@ public class Login extends Activity {
 					}
 				});
 	}
-	
-	@Override
-	protected void onResume(){
-		super.onResume();
-		//mSecurityNumber=null;
-	}
 
 
 	/**
