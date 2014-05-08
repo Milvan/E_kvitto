@@ -86,10 +86,16 @@ public final class Database {
 	/**
 	 * Returns a list of all receipts for a specific credit card
 	 * @param card The credit card.
-	 * @return List of all receipts linked to the card.
+	 * @return List of all receipts linked to the card. 
 	 */
 	public LinkedList<Receipt> getReceipts(CreditCard card){
-		return receipts.get(card);
+		LinkedList<Receipt> receiptList = receipts.get(card);
+		if (receiptList!=null){
+			return receipts.get(card);
+		} else {
+			return new LinkedList<Receipt>();
+		}
+		
 	}
 	
 	/**
