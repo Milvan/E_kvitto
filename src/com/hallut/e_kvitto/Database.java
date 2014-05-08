@@ -35,13 +35,13 @@ public final class Database {
 	 */
 	private void fillCards(){
 		LinkedList<CreditCard> list = new LinkedList<CreditCard>();
-		list.add(new CreditCard("5295768101681568", "Pelle Svanslï¿½s", 1 ,16, 654, "MasterCard", "Ticket Rikskortet"));
-		list.add(new CreditCard("4865135008460565", "Pelle Svanslï¿½s", 8, 16, 785, "Visa", "SEB", "IVaE Consultants"));
+		list.add(new CreditCard("5295768101681568", "Pelle Svanslös", 1 ,16, 654, "MasterCard", "Ticket Rikskortet"));
+		list.add(new CreditCard("4865135008460565", "Pelle Svanslös", 8, 16, 785, "Visa", "SEB", "IVaE Consultants"));
 		cards.put("123456789012", list);
 		
 		LinkedList<CreditCard> list2 = new LinkedList<CreditCard>();
-		list2.add(new CreditCard("7865156765820645", "Maja Grï¿½ddnos", 2, 15, 657, "American Express", "Amex"));
-		cards.put("foo@example.com", list2);
+		list2.add(new CreditCard("7865156765820645", "Maja Gräddnos", 2, 15, 657, "American Express", "Amex"));
+		cards.put("123123123123", list2);
 	}
 	
 	/**
@@ -50,9 +50,12 @@ public final class Database {
 	private void fillReceipts(){
 		CreditCard card = cards.get("123456789012").getFirst();
 		String date = "2014-04-22";
-		Article[] articles1 = new Article[]{new Article("Mellanmjï¿½lk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
+		Article[] articles1 = new Article[]{new Article("Mellanmjölk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
+		Article[] articles2 = new Article[]{new Article("SD kort 4GB", 499.0, 125.0)};
 		addReceipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1);
 		addReceipt(2830, "Konsum", date, "19:00", "280", "6293-012010", card, articles1);
+		addReceipt(1023, "Mediamarkt", date, "17:10", "19", "123-2314", card, articles2);
+		addReceipt(1023, "Elgiganten", date, "17:17", "12", "3463-25321", card, articles2);
 	}
 	
 	/**
