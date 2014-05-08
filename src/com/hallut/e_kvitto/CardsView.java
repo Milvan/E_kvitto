@@ -33,7 +33,7 @@ public class CardsView extends Activity {
         lv.setAdapter(new CardAdapter (this, cards));
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	public void onItemClick(AdapterView <? > arg0, View view, int position, long id) {
-                // Test click. Show message when clicked.
+               
         		CreditCard card = (CreditCard) arg0.getItemAtPosition(position);
                 HomeBackend.getHomeBackend().setCurrentCard(card);
                 finish();

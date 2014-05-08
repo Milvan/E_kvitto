@@ -18,7 +18,7 @@ public final class HomeBackend {
 	 * Sets up a backend precessor for the HomeScreen.
 	 * @param c
 	 */
-	private HomeBackend(){
+	public HomeBackend(){
 		db = Database.getDatabase();
 	}
 	
@@ -42,12 +42,11 @@ public final class HomeBackend {
 	 */
 	public void loadInfo(String user){
 		getCards(user);
-		
 		cardIterator = cards.iterator();
 		try{
-			currentCard = cardIterator.next();
+			currentCard = getNextCard();
 		} catch (EmptyStackException e){
-			
+			currentCard = null;
 		}
 		
 	}

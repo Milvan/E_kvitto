@@ -15,28 +15,28 @@ public class Home extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		// TODO: get info from database here about credit cards
-		loadInfo();
-		
 		setContentView(R.layout.activity_home);
-		
-		//Set textField to current credit card
-		//setInfo();
-		
-		
+		loadInfo();
+//		try{
+//			back.setCurrentCard(back.getNextCard());
+//		} catch (EmptyStackException e){
+//			back.setCurrentCard(null);
+//		}
+		setInfo();
 	}
 	
 	@Override
 	protected void onResume(){
 		super.onResume();
+		//loadInfo();
 		setInfo();
 	}
 	
 	private void loadInfo(){
 		back = HomeBackend.getHomeBackend();
 		try{
-			String user = this.getIntent().getExtras().getString("user");
+			Server s = Server.getServer();
+			String user = s.getLoggedInUser();
 			back.loadInfo(user);
 		} catch(Exception e){
 			e.printStackTrace();
@@ -45,8 +45,14 @@ public class Home extends Activity {
 	
 	private void setInfo(){
 		TextView text = (TextView) findViewById(R.id.cardnumber);
-		try{
-			String temp = back.getCurrentCard().getCardNumber();
+		
+			CreditCard currentCard = back.getCurrentCard();
+			if(currentCard==null){
+				text.setTextSize(18);
+				text.setText("Inget kort valt");
+				return;
+			}
+			String temp = currentCard.getCardNumber();
 			StringBuilder cardnumber = new StringBuilder();
 			for(int i=0; i<temp.length();i++){
 				if(i!=0){
@@ -57,10 +63,7 @@ public class Home extends Activity {
 				cardnumber.append(temp.charAt(i));
 			}
 			text.setText(cardnumber.toString());
-		} catch(EmptyStackException e){
-			text.setTextSize(18);
-			text.setText("Inga tillgängliga kreditkort");
-		}
+		
 	}
 	
 	

@@ -1,5 +1,12 @@
 package com.hallut.e_kvitto;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -27,7 +34,7 @@ public class Login extends Activity {
 	 */
 	private UserLoginTask mAuthTask = null;
 
-	// Values for email and password at the time of the login attempt.
+	// Values for security number at the time of the login attempt.
 	private String mSecurityNumber;
 
 	// UI references.
@@ -57,6 +64,12 @@ public class Login extends Activity {
 						attemptLogin();
 					}
 				});
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		//mSecurityNumber=null;
 	}
 
 
@@ -175,12 +188,11 @@ public class Login extends Activity {
 		protected void onPostExecute(final Boolean success) {
 			mAuthTask = null;
 
-			if (success) {
+			if (success) {				
 				String username = mSecurityNumberView.getText().toString();
-				Bundle bun = new Bundle();
-				bun.putString("user", username);
+				Server s = Server.getServer();
+				s.logIn(username);
 				Intent homeScreen = new Intent(Login.this, Home.class);
-				homeScreen.putExtras(bun);
 				startActivity(homeScreen);
 			}
 		}
@@ -206,7 +218,6 @@ public class Login extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data){
 		if(requestCode==1){
 			if(resultCode==RESULT_OK){
-				System.out.println("here");
 				mLoginStatusMessageView.setText(R.string.login_progress_signing_in);
 				showProgress(true);
 				mAuthTask = new UserLoginTask();

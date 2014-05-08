@@ -62,6 +62,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.hallut.e_kvitto.CardsView"
+            android:label="@string/title_activity_cards_view" >
+        </activity>
     </application>
 
 </manifest>
