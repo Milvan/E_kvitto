@@ -72,16 +72,26 @@ public class Home extends Activity {
 		//Enter one case per button and control what to happen for each button.
 			case R.id.my_receipts:
 				if(back.getCurrentCard()!=null){
-					Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
-					startActivity(receiptListScreen);
+					if(Database.getDatabase().getReceipts(back.getCurrentCard()).size()<1){
+						Toast.makeText(getApplicationContext(), "Det finns inga kvitton på valt kort", Toast.LENGTH_LONG).show();
+					} else {
+						Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
+						startActivity(receiptListScreen);
+					}
+					
 				} else {
 					Toast.makeText(getApplicationContext(), "Inget kreditkort valt",
 		                    Toast.LENGTH_SHORT).show();
 				}
 				break;
 			case R.id.my_cards:
-				Intent creditCardScreen = new Intent(Home.this, CardsView.class);
-				startActivity(creditCardScreen);
+				if(back.getUsersCards().size()<1){
+					Toast.makeText(getApplicationContext(), "Du har inga registrerade kort", Toast.LENGTH_LONG).show();
+				} else {
+					Intent creditCardScreen = new Intent(Home.this, CardsView.class);
+					startActivity(creditCardScreen);
+				}
+				
 				break;
 			
 			default:

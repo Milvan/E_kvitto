@@ -12,11 +12,6 @@ import android.widget.ListView;
 
 public class CardsView extends Activity {
 	
-	
-	//TODO: We need something else here. Need to store Receipt objects in some kind of list, responding to graphical list
-	// The graphical list will only display a Company name text. could be more than one of the same. So we need to ID the correct receipt
-	// either from storing the actual receipt in the graphical view as well or from responding index in backend array.
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

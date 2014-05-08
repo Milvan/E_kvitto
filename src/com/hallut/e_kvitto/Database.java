@@ -54,8 +54,8 @@ public final class Database {
 		Article[] articles2 = new Article[]{new Article("SD kort 4GB", 499.0, 125.0)};
 		addReceipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1);
 		addReceipt(2830, "Konsum", date, "19:00", "280", "6293-012010", card, articles1);
-		addReceipt(1023, "Mediamarkt", date, "17:10", "19", "123-2314", card, articles2);
-		addReceipt(1023, "Elgiganten", date, "17:17", "12", "3463-25321", card, articles2);
+		addReceipt(1023, "Mediamarkt", "2014-04-25", "17:10", "19", "123-2314", card, articles2);
+		addReceipt(1023, "Elgiganten", "2014-04-24", "17:17", "12", "3463-25321", card, articles2);
 	}
 	
 	/**
