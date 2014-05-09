@@ -10,13 +10,14 @@ import android.widget.TextView;
 
 public class Authenticate extends Activity {
 	
-	private TextView mPass;
+	private TextView mPassView;
+	private String mPass = new String();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_authenticate);
-		mPass = (TextView) findViewById(R.id.view_auth_pass);
+		mPassView = (TextView) findViewById(R.id.passview);
 
 	}
 
@@ -24,34 +25,44 @@ public class Authenticate extends Activity {
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.
 			case R.id.num1:
-				mPass.setText(mPass.getText()+"1");
-			break;
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="1";
+				break;
 			case R.id.num2:
-				mPass.setText(mPass.getText()+"2");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="2";
 				break;
 			case R.id.num3:
-				mPass.setText(mPass.getText()+"3");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="3";
 				break;
 			case R.id.num4:
-				mPass.setText(mPass.getText()+"4");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="4";
 				break;
 			case R.id.num5:
-				mPass.setText(mPass.getText()+"5");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="5";
 				break;
 			case R.id.num6:
-				mPass.setText(mPass.getText()+"6");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="6";
 				break;
 			case R.id.num7:
-				mPass.setText(mPass.getText()+"7");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="7";
 				break;
 			case R.id.num8:
-				mPass.setText(mPass.getText()+"8");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="8";
 				break;
 			case R.id.num9:
-				mPass.setText(mPass.getText()+"9");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="9";
 				break;
 			case R.id.num0:
-				mPass.setText(mPass.getText()+"0");
+				mPassView.setText(mPassView.getText()+"*");
+				mPass+="0";
 				break;
 			case R.id.auth:
 				setResult(RESULT_OK);

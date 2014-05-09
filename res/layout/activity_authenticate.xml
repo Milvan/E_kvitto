@@ -3,126 +3,192 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hallut.e_kvitto.Authenticate"
-    tools:ignore="MergeRootFrame"
     android:background="@drawable/authenticate"
-    >
+    tools:context="com.hallut.e_kvitto.Authenticate"
+    tools:ignore="MergeRootFrame" >
 
-    <AbsoluteLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <Button
-            android:id="@+id/num5"
-            android:layout_width="80dp"
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_x="124dp"
-            android:layout_y="329dp"
-            android:onClick="onClick"
-            android:background="@android:color/transparent" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="21dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
 
-       <TextView
-            android:id="@+id/view_auth_pass"
-            android:layout_width="275dp"
-            android:layout_height="49dp"
-            android:layout_x="24dp"
-            android:layout_y="148dp"
-            android:ems="10"
-            android:textColor="#000000" >
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp" >
 
-        </TextView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
 
-        <Button
-            android:id="@+id/num1"
-            android:layout_width="80dp"
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num1"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num2"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num3"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:paddingBottom="2dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num4"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num5"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num6"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                         android:background="@android:color/transparent"/>
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num7"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num8"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num9"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/erase"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"/>
+
+                    <Button android:onClick="onClick"
+                        android:id="@+id/num0"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" android:background="@android:color/transparent"/>
+
+                    <Button
+                        android:onClick="onClick"
+                        android:id="@+id/auth"
+                        android:layout_width="90dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true" android:background="@android:color/transparent"/>
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/passview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_x="29dp"
-            android:layout_y="259dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
+            android:layout_above="@+id/tableLayout1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="47dp"
+            android:layout_marginLeft="27dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-        <Button
-            android:id="@+id/num4"
-            android:layout_width="82dp"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_x="27dp"
-            android:layout_y="309dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-        <Button
-            android:id="@+id/num7"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_x="31dp"
-            android:layout_y="360dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num8"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_x="128dp"
-            android:layout_y="360dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num0"
-            android:layout_width="81dp"
-            android:layout_height="wrap_content"
-            android:layout_x="125dp"
-            android:layout_y="414dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/auth"
-            android:layout_width="83dp"
-            android:layout_height="wrap_content"
-            android:layout_x="217dp"
-            android:layout_y="416dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num9"
-            android:layout_width="81dp"
-            android:layout_height="wrap_content"
-            android:layout_x="217dp"
-            android:layout_y="364dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num6"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_x="215dp"
-            android:layout_y="308dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num3"
-            android:layout_width="81dp"
-            android:layout_height="wrap_content"
-            android:layout_x="217dp"
-            android:layout_y="266dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/num2"
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
-            android:layout_x="125dp"
-            android:layout_y="257dp"
-            android:background="@android:color/transparent"
-            android:onClick="onClick" />
-
-    </AbsoluteLayout>
+    </RelativeLayout>
 
 </FrameLayout>
 
