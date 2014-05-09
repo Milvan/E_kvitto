@@ -1,12 +1,17 @@
 package com.hallut.e_kvitto;
 
-public class Receipt {
+import java.io.Serializable;
+
+
+
+
+public class Receipt implements Serializable{
 	
-	private final long ID;
-	private final String company, date, time, sellerID, terminalID; 
-	private final CreditCard card;
-	private final Article[] articles;
-	private final double totalSum;
+	private long ID;
+	private String company, date, time, sellerID, terminalID; 
+	private CreditCard card;
+	private Article[] articles;
+	private double totalSum;
 	
 	public Receipt(long ID, String company, String date, String time, String sellerID, String terminalID, CreditCard card, Article[] articles){
 		this.ID = ID;

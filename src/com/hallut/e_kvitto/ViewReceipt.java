@@ -14,10 +14,18 @@ public class ViewReceipt extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_viewreceipt);
 		Intent in = this.getIntent();
-		String company = in.getStringExtra("company");
-		Log.i("company", company);
+		//Article articles[] = (Article[]) in.getSerializableExtra("articles");
+		Receipt receipt = (Receipt) in.getSerializableExtra("receipt");
+		
 		TextView companyText = (TextView) findViewById(R.id.compName);
-		companyText.setText(company);
+		TextView receiptDate = (TextView) findViewById(R.id.receiptDate);
+		Article[] articles = receipt.getArticles();
+		articles[0].getName();
+		
+		
+		receiptDate.setText(receipt.getDate());
+		companyText.setText(articles[0].getName());
+		
 	}
 
 }

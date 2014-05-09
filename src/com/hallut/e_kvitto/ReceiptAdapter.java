@@ -54,10 +54,9 @@ public class ReceiptAdapter extends BaseAdapter
             rowView = inflater.inflate(R.layout.list_view, parent, false);
         } 
 		
-		//rowView = inflater.inflate(R.layout.list_view, parent, false);
-	    TextView textView = (TextView) rowView.findViewById(R.id.companyName);
+	    TextView company = (TextView) rowView.findViewById(R.id.companyName);
 	    TextView date = (TextView) rowView.findViewById(R.id.date);
-	    textView.setText(rec.get(position).getCompany());
+	    company.setText(rec.get(position).getCompany());
 	    date.setText(rec.get(position).getDate());
 		return rowView;
 	}

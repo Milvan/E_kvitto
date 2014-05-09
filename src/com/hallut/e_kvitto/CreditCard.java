@@ -1,6 +1,8 @@
 package com.hallut.e_kvitto;
 
-public class CreditCard {
+import java.io.Serializable;
+
+public class CreditCard implements Serializable{
 	private final String cardNumber, owner, company, type, bank;
 	private final int month, year, cvv;
 	

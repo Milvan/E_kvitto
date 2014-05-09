@@ -25,7 +25,7 @@ public class ReceiptList extends Activity {
 	
 	private void setInfo(){
 		LinkedList<Receipt> rec = db.getReceipts(HomeBackend.getHomeBackend().getCurrentCard());
-		ListView lv = (ListView) findViewById(R.id.listView1);
+		ListView lv = (ListView) findViewById(R.id.receiptList);
         lv.setAdapter(new ReceiptAdapter (this, rec));
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	public void onItemClick(AdapterView <?> arg0, View view, int position, long id) {
@@ -41,14 +41,16 @@ public class ReceiptList extends Activity {
 	
 	private void sendInfo(Receipt receipt){
 		Intent viewReceipt = new Intent(ReceiptList.this, ViewReceipt.class);
-        viewReceipt.putExtra("company", receipt.getCompany());
-        viewReceipt.putExtra("ID", receipt.getID());
-        viewReceipt.putExtra("date", receipt.getDate());
-        viewReceipt.putExtra("time", receipt.getTime());
-        viewReceipt.putExtra("sellerID", receipt.getSellerID());
-        viewReceipt.putExtra("terminal", receipt.getTerminalID());
-        viewReceipt.putExtra("creditCard", receipt.getCard().getCardNumber());
-        viewReceipt.putExtra("articles", receipt.getArticles());
+		viewReceipt.putExtra("receipt", receipt);
+//		viewReceipt.putExtra("articles", receipt.getArticles());
+//		viewReceipt.putExtra("company", receipt.getCompany());
+//        viewReceipt.putExtra("ID", receipt.getID());
+//        viewReceipt.putExtra("date", receipt.getDate());
+//        viewReceipt.putExtra("time", receipt.getTime());
+//        viewReceipt.putExtra("sellerID", receipt.getSellerID());
+//        viewReceipt.putExtra("terminal", receipt.getTerminalID());
+//        viewReceipt.putExtra("creditCard", receipt.getCard().getCardNumber());
+//        
         startActivity(viewReceipt);
 	}
 	

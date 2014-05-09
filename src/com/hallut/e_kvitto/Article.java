@@ -1,6 +1,9 @@
 package com.hallut.e_kvitto;
 
-public class Article {
+import java.io.Serializable;
+
+
+public class Article implements Serializable{
 	
 	private final String name;
 	private final double price, tax;
@@ -38,4 +41,5 @@ public class Article {
 	public String toString(){
 		return name + " " + price + " varav moms: " +tax; 
 	}
+
 }
