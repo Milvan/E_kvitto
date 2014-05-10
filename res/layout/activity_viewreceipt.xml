@@ -10,10 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:paddingTop="5dp"
         android:text="Company Name"
         android:textColor="#000000"
-        android:textSize="22sp"
-        android:paddingTop="5dp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/receiptDate"
@@ -28,15 +28,15 @@
         android:id="@+id/receiptID"
         android:layout_width="112dp"
         android:layout_height="36dp"
+        android:paddingLeft="10dp"
         android:text="receiptID"
         android:textColor="#000000"
-        android:textSize="15sp"
-        android:paddingLeft="10dp" />
+        android:textSize="15sp" />
 
     <ListView
         android:id="@+id/receiptArticles"
         android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_height="240dp"
         android:paddingLeft="10dp" >
     </ListView>
 
@@ -53,24 +53,24 @@
         android:id="@+id/time"
         android:layout_width="181dp"
         android:layout_height="20dp"
+        android:paddingLeft="10dp"
         android:text="time"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/sellerID"
         android:layout_width="170dp"
         android:layout_height="20dp"
+        android:paddingLeft="10dp"
         android:text="sellerID"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/terminalID"
         android:layout_width="208dp"
         android:layout_height="46dp"
+        android:paddingLeft="10dp"
         android:text="terminalID"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
+        android:textColor="#000000" />
 
 </LinearLayout>
