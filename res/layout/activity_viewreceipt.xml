@@ -70,7 +70,9 @@
         android:id="@+id/receiptArticle"
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:paddingLeft="10dp" >
+        android:paddingLeft="10dp" 
+        android:listSelector="@android:color/transparent" >
+        
     </ListView>
 
 </LinearLayout>

@@ -34,7 +34,7 @@ public class ViewReceipt extends Activity{
 		company.setText(receipt.getCompany());
 		date.setText(receipt.getDate());
 		receiptID.setText("Kvitto: " + String.valueOf(receipt.getID()));
-		totalsum.setText("Total: " + String.valueOf(receipt.getTotalSum()));
+		totalsum.setText("Total: " + String.valueOf(receipt.getTotalSum() + " kr"));
 		time.setText("Tid: " + receipt.getTime());
 		sellerID.setText("Säljare: " + receipt.getSellerID());
 		terminalID.setText("Kassa: " + receipt.getTerminalID());

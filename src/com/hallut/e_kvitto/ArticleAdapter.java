@@ -59,7 +59,7 @@ public class ArticleAdapter extends BaseAdapter
 	    
 	    articleName.setText(articles[position].getName());
 	    tax.setText(String.valueOf(articles[position].getTax()));
-	    price.setText(String.valueOf(articles[position].getPrice()));
+	    price.setText(String.valueOf(articles[position].getPrice() + " kr"));
 	    
 		return rowView;
 	}
