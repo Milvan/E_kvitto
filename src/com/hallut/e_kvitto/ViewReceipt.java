@@ -16,17 +16,20 @@ public class ViewReceipt extends Activity{
 		Intent in = this.getIntent();
 		
 		Receipt receipt = (Receipt) in.getSerializableExtra("receipt");
+		setInfo(receipt);
+
+	}
+	
+	public void setInfo(Receipt receipt){
 		Article articles[] = receipt.getArticles();
-		ListView lv = (ListView) findViewById(R.id.receiptArticles);
-        lv.setAdapter(new ArticleAdapter (this, articles));
 		
 		TextView company = (TextView) findViewById(R.id.compName);
 	    TextView date = (TextView) findViewById(R.id.receiptDate);
 	    TextView receiptID = (TextView) findViewById(R.id.receiptID);
-	    TextView totalsum = (TextView) findViewById(R.id.totalsum);
-	    TextView time = (TextView) findViewById(R.id.time);
-	    TextView sellerID = (TextView) findViewById(R.id.sellerID);
-	    TextView terminalID = (TextView) findViewById(R.id.terminalID);
+	    TextView totalsum = (TextView) findViewById(R.id.totalSum);
+	    TextView time = (TextView) findViewById(R.id.receiptTime);
+	    TextView sellerID = (TextView) findViewById(R.id.sellerId);
+	    TextView terminalID = (TextView) findViewById(R.id.terminalId);
 	    
 		company.setText(receipt.getCompany());
 		date.setText(receipt.getDate());
@@ -36,6 +39,8 @@ public class ViewReceipt extends Activity{
 		sellerID.setText("Säljare: " + receipt.getSellerID());
 		terminalID.setText("Kassa: " + receipt.getTerminalID());
 		
+		ListView lv = (ListView) findViewById(R.id.receiptArticle);
+        lv.setAdapter(new ArticleAdapter (this, articles));
 	}
 
 }

@@ -25,23 +25,40 @@
         android:textSize="17sp" />
 
     <TextView
-        android:id="@+id/receiptID"
-        android:layout_width="112dp"
-        android:layout_height="36dp"
-        android:text="receiptID"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:paddingLeft="10dp" />
-
-    <ListView
-        android:id="@+id/receiptArticles"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:paddingLeft="10dp" >
-    </ListView>
+        android:id="@+id/receiptTime"
+        android:layout_width="181dp"
+        android:layout_height="20dp"
+        android:paddingLeft="10dp"
+        android:text="time"
+        android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/totalsum"
+        android:id="@+id/receiptID"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="receiptID"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sellerId"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:paddingLeft="10dp"
+        android:text="sellerID"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/terminalId"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="terminalID"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/totalSum"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginLeft="170dp"
@@ -49,28 +66,11 @@
         android:textColor="#000000"
         android:textSize="22sp" />
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="181dp"
-        android:layout_height="20dp"
-        android:text="time"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
-
-    <TextView
-        android:id="@+id/sellerID"
-        android:layout_width="170dp"
-        android:layout_height="20dp"
-        android:text="sellerID"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
-
-    <TextView
-        android:id="@+id/terminalID"
-        android:layout_width="208dp"
-        android:layout_height="46dp"
-        android:text="terminalID"
-        android:textColor="#000000"
-        android:paddingLeft="10dp" />
+    <ListView
+        android:id="@+id/receiptArticle"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:paddingLeft="10dp" >
+    </ListView>
 
 </LinearLayout>

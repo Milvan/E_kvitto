@@ -1153,10 +1153,11 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int receiptArticles=0x7f05005d;
+        public static final int receiptArticle=0x7f050061;
         public static final int receiptDate=0x7f05005b;
-        public static final int receiptID=0x7f05005c;
+        public static final int receiptID=0x7f05005d;
         public static final int receiptList=0x7f050059;
+        public static final int receiptTime=0x7f05005c;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1168,7 +1169,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f050037;
         public static final int search_voice_btn=0x7f05003b;
         public static final int security_number=0x7f050057;
-        public static final int sellerID=0x7f050060;
+        public static final int sellerId=0x7f05005e;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
@@ -1183,12 +1184,11 @@ containing a value of this type.
         public static final int tableRow3=0x7f050046;
         public static final int tableRow4=0x7f05004a;
         public static final int tax=0x7f050065;
-        public static final int terminalID=0x7f050061;
+        public static final int terminalId=0x7f05005f;
         public static final int textView2=0x7f05004f;
-        public static final int time=0x7f05005f;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
-        public static final int totalsum=0x7f05005e;
+        public static final int totalSum=0x7f050060;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
