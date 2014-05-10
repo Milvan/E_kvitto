@@ -57,14 +57,17 @@
         android:text="terminalID"
         android:textColor="#000000" />
 
-    <TextView
+    
+    <TextView	
         android:id="@+id/totalSum"
         android:layout_width="match_parent"
         android:layout_height="46dp"
-        android:layout_marginLeft="170dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right"
         android:text="totalsum"
         android:textColor="#000000"
         android:textSize="22sp" />
+        
 
     <TableLayout
         android:layout_width="match_parent"
