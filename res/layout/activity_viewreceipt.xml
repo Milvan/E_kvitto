@@ -1,30 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/whitebackground"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/compName"
-        android:layout_width="230dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="Company Name"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:paddingTop="5dp" />
 
     <TextView
         android:id="@+id/receiptDate"
-        android:layout_width="144dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="Date"
         android:textColor="#000000"
-        android:textSize="22sp" />
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/receiptID"
+        android:layout_width="112dp"
+        android:layout_height="36dp"
+        android:text="receiptID"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:paddingLeft="10dp" />
 
     <ListView
         android:id="@+id/receiptArticles"
         android:layout_width="match_parent"
-        android:layout_height="326dp" >
+        android:layout_height="24dp"
+        android:paddingLeft="10dp" >
     </ListView>
+
+    <TextView
+        android:id="@+id/totalsum"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="170dp"
+        android:text="totalsum"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="181dp"
+        android:layout_height="20dp"
+        android:text="time"
+        android:textColor="#000000"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/sellerID"
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:text="sellerID"
+        android:textColor="#000000"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/terminalID"
+        android:layout_width="208dp"
+        android:layout_height="46dp"
+        android:text="terminalID"
+        android:textColor="#000000"
+        android:paddingLeft="10dp" />
 
 </LinearLayout>

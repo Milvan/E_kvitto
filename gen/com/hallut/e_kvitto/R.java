@@ -1095,13 +1095,14 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f050023;
         public static final int action_bar_title=0x7f050022;
         public static final int action_context_bar=0x7f05001d;
-        public static final int action_forgot_password=0x7f050060;
+        public static final int action_forgot_password=0x7f050068;
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05005f;
+        public static final int action_settings=0x7f050067;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
+        public static final int articleName=0x7f050064;
         public static final int auth=0x7f05004d;
         public static final int beginning=0x7f050011;
         public static final int cardlist=0x7f050050;
@@ -1109,9 +1110,9 @@ containing a value of this type.
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int compName=0x7f05005a;
-        public static final int companyName=0x7f05005d;
+        public static final int companyName=0x7f050062;
         public static final int container=0x7f05003c;
-        public static final int date=0x7f05005e;
+        public static final int date=0x7f050063;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
@@ -1148,11 +1149,13 @@ containing a value of this type.
         public static final int num8=0x7f050048;
         public static final int num9=0x7f050049;
         public static final int passview=0x7f05004e;
+        public static final int price=0x7f050066;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int receiptArticles=0x7f05005c;
+        public static final int receiptArticles=0x7f05005d;
         public static final int receiptDate=0x7f05005b;
+        public static final int receiptID=0x7f05005c;
         public static final int receiptList=0x7f050059;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
@@ -1165,6 +1168,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f050037;
         public static final int search_voice_btn=0x7f05003b;
         public static final int security_number=0x7f050057;
+        public static final int sellerID=0x7f050060;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
@@ -1178,9 +1182,13 @@ containing a value of this type.
         public static final int tableRow2=0x7f050042;
         public static final int tableRow3=0x7f050046;
         public static final int tableRow4=0x7f05004a;
+        public static final int tax=0x7f050065;
+        public static final int terminalID=0x7f050061;
         public static final int textView2=0x7f05004f;
+        public static final int time=0x7f05005f;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
+        public static final int totalsum=0x7f05005e;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1243,7 +1251,8 @@ containing a value of this type.
         public static final int activity_starting_splash=0x7f03001d;
         public static final int activity_viewreceipt=0x7f03001e;
         public static final int list_view=0x7f03001f;
-        public static final int support_simple_spinner_dropdown_item=0x7f030020;
+        public static final int receiptlist_view=0x7f030020;
+        public static final int support_simple_spinner_dropdown_item=0x7f030021;
     }
     public static final class menu {
         public static final int authenticate=0x7f0c0000;
@@ -1316,13 +1325,11 @@ containing a value of this type.
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
-
         
 
         Base application theme for API 11+. This theme completely replaces
