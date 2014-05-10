@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.hallut.e_kvitto.Login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.hallut.e_kvitto.LOGIN" />
 
@@ -24,7 +25,8 @@
         </activity>
         <activity
             android:name="com.hallut.e_kvitto.Home"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="com.hallut.e_kvitto.HOME" />
 
@@ -51,7 +53,8 @@
         </activity>
         <activity
             android:name="com.hallut.e_kvitto.Authenticate"
-            android:label="@string/title_activity_authenticate" >
+            android:label="@string/title_activity_authenticate"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.hallut.e_kvitto.ViewReceipt"

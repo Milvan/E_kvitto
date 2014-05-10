@@ -1293,33 +1293,36 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_forgot_password=0x7f0a0016;
+        public static final int action_forgot_password=0x7f0a0017;
         public static final int action_settings=0x7f0a000f;
-        public static final int action_sign_in_short=0x7f0a0015;
+        public static final int action_sign_in_short=0x7f0a0016;
         public static final int app_name=0x7f0a000d;
-        public static final int error_field_required=0x7f0a0019;
-        public static final int error_invalid_password=0x7f0a0018;
-        public static final int error_invalid_securitynumber=0x7f0a001a;
-        public static final int login_progress_signing_in=0x7f0a0017;
+        public static final int error_field_required=0x7f0a001a;
+        public static final int error_invalid_password=0x7f0a0019;
+        public static final int error_invalid_securitynumber=0x7f0a001b;
+        public static final int login_progress_signing_in=0x7f0a0018;
         /**  Strings related to login 
          */
-        public static final int prompt_security_number=0x7f0a0014;
-        public static final int security_number=0x7f0a001b;
+        public static final int prompt_security_number=0x7f0a0015;
+        public static final int security_number=0x7f0a001c;
         public static final int title_activity_authenticate=0x7f0a0011;
         public static final int title_activity_cards_view=0x7f0a0012;
         public static final int title_activity_home=0x7f0a000e;
-        public static final int title_activity_login=0x7f0a0013;
+        public static final int title_activity_login=0x7f0a0014;
+        public static final int title_activity_receiptlist_view=0x7f0a0013;
         public static final int title_activity_starting_splash=0x7f0a0010;
     }
     public static final class style {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces

@@ -2,9 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bluebackground"  >
-
+    android:background="@drawable/bluebackground"
+    android:orientation="vertical" >
+	
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_cards_view"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:fontFamily="ARIAL"
+        android:textStyle="bold"
+        />
+    
     <ListView
         android:id="@+id/cardlist"
         android:layout_width="match_parent"

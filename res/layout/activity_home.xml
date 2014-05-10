@@ -13,18 +13,16 @@
         android:layout_height="94dp"
         android:background="@android:color/transparent"
         android:onClick="onClick" />
-		
-        <TextView
+
+		    <TextView
             android:id="@+id/cardnumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="185dp"
-            android:layout_marginLeft="55dp"
-			android:textSize="20sp"
-			 />
-
+            android:layout_above="@+id/my_cards"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="105dp"
+            android:textSize="20sp" />	
+		
         <Button
             android:id="@+id/my_cards"
             android:layout_width="match_parent"
@@ -34,5 +32,7 @@
             android:background="@android:color/transparent"
             android:layout_height="94dp"
             android:onClick="onClick" />
+
+
 
 </RelativeLayout>

@@ -5,6 +5,18 @@
     android:orientation="vertical"
     android:background="@drawable/bluebackground"  >
 
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_receiptlist_view"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:fontFamily="ARIAL"
+        android:textStyle="bold"
+        />
+    
     <ListView
         android:id="@+id/receiptList"
         android:layout_width="match_parent"

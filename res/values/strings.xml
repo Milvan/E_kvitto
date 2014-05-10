@@ -6,6 +6,7 @@
     <string name="action_settings">Inställningar</string>
     <string name="title_activity_starting_splash">E-Kvitto</string>
     <string name="title_activity_authenticate">Authenticate</string>
-    <string name="title_activity_cards_view">Mina kort</string>
+    <string name="title_activity_cards_view">MINA BANKKORT</string>
+    <string name="title_activity_receiptlist_view">MINA KVITTON</string>
 
 </resources>
