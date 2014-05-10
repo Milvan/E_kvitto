@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/my_cards"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="105dp"
+            android:layout_marginBottom="125dp"
             android:textSize="20sp" />	
 		
         <Button
