@@ -10,7 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+/**
+ * Activity which is being displayed in the beginning when the application is started.
+ *
+ */
 public class StartingSplash extends Activity {
 
 	@Override

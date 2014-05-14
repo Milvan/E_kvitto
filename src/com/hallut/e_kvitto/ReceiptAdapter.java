@@ -9,14 +9,23 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class ReceiptAdapter extends BaseAdapter
-{
+/**
+ * Creates a view for each specific item in a ListView, in this case ReceiptList.
+ * 
+ * @author Fredrik Norrman
+ *
+ */
+public class ReceiptAdapter extends BaseAdapter {
     
     private Context mContext;
     private LinkedList<Receipt> rec;
-    private LayoutInflater inflater;
+    private LayoutInflater inflater; //used to set the layout of each row in the ListView.
 	
-    
+    /**
+     * Set information about the items that are going to be shown in the ListView.
+     * @param context
+     * @param receipts
+     */
     public ReceiptAdapter(Context context,LinkedList<Receipt> receipts) 
     {
             super();
@@ -27,33 +36,29 @@ public class ReceiptAdapter extends BaseAdapter
     }
       
     @Override
-    public int getCount() 
-    {
+    public int getCount() {
         return rec.size();
     }
 
     @Override
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return rec.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return rec.get(position).getID();
     }
 
-
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		View rowView = convertView;
 
 		if (rowView == null) {
+			//get the custom created row view from list_view.xml file.
             rowView = inflater.inflate(R.layout.list_view, parent, false);
         } 
-		
+		// Set information in the layout
 	    TextView company = (TextView) rowView.findViewById(R.id.companyName);
 	    TextView date = (TextView) rowView.findViewById(R.id.date);
 	    company.setText(rec.get(position).getCompany());

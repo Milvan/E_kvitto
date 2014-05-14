@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-
+/**
+ * Activity which displays a list of credit cards which the current user has registered. 
+ *
+ */
 public class CardsView extends Activity {
 	
 
@@ -22,11 +25,16 @@ public class CardsView extends Activity {
 		
 	}
 	
+	/**
+	 * Get credit card information from HomeBackend and set this information to the layout.
+	 */
 	private void setInfo(){
 		LinkedList<CreditCard> cards = HomeBackend.getHomeBackend().getUsersCards();
 		ListView lv = (ListView) findViewById(R.id.cardlist);
         lv.setAdapter(new CardAdapter (this, cards));
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        	// If a card in the list is clicked, set the current card to that card and
+        	// return to Home page.
         	public void onItemClick(AdapterView <? > arg0, View view, int position, long id) {
                
         		CreditCard card = (CreditCard) arg0.getItemAtPosition(position);

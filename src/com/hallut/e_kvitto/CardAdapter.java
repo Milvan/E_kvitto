@@ -9,12 +9,21 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+/**
+ * Creates a view for each specific item in the ListView that shows credit cards.
+ *
+ */
 public class CardAdapter extends BaseAdapter{
 	
 	private Context mContext;
     private LinkedList<CreditCard> cards;
-    private LayoutInflater inflater;
+    private LayoutInflater inflater; // used to set the layout of each row in the ListView.
     
+    /**
+     * Set information about the items that are going to be shown in the ListView.
+     * @param context
+     * @param cards
+     */
     public CardAdapter(Context context,LinkedList<CreditCard> cards){
     	super();
     	mContext = context;
@@ -30,28 +39,26 @@ public class CardAdapter extends BaseAdapter{
 
 	@Override
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return cards.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return cards.get(position).getCvv();
     }
 
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		View rowView = convertView;
 
 		if (rowView == null) {
+			// get the custom created row view from list_view.xml file.
             rowView = inflater.inflate(R.layout.list_view, parent, false);
 
         } 
 		
-		//rowView = inflater.inflate(R.layout.list_view, parent, false);
+		// Set information in the layout
 	    TextView textView = (TextView) rowView.findViewById(R.id.companyName);
 	    TextView date = (TextView) rowView.findViewById(R.id.date);
 	    textView.setText(cards.get(position).getType());

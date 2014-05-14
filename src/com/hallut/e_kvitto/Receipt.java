@@ -3,8 +3,10 @@ package com.hallut.e_kvitto;
 import java.io.Serializable;
 
 
-
-
+/**
+ * This class is used to hold information about receipts.
+ *
+ */
 public class Receipt implements Serializable{
 	
 	private long ID;
@@ -13,6 +15,18 @@ public class Receipt implements Serializable{
 	private Article[] articles;
 	private double totalSum;
 	
+	/**
+	 * Constructor of Receipt, set all the required information that is needed for a receipt
+	 * 
+	 * @param ID set the receipt id
+	 * @param company set where the receipt is bought
+	 * @param date set when the receipt is made
+	 * @param time set when the receipt is made
+	 * @param sellerID set the id of the seller
+	 * @param terminalID set the id of the terminal which sent the receipt to the database
+	 * @param card set the card, which the receipt belongs to
+	 * @param articles set all the articles to the receipt
+	 */
 	public Receipt(long ID, String company, String date, String time, String sellerID, String terminalID, CreditCard card, Article[] articles){
 		this.ID = ID;
 		this.company = company;
@@ -25,6 +39,10 @@ public class Receipt implements Serializable{
 		totalSum = totalSum();
 	}
 	
+	/**
+	 * 
+	 * @return total sum of all articles
+	 */
 	private double totalSum(){
 		double sum=0;
 		for(Article a : articles){

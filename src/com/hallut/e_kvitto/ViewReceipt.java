@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * Activity which display a chosen receipt.
+ *
+ */
 public class ViewReceipt extends Activity{
 
 	@Override
@@ -17,12 +21,17 @@ public class ViewReceipt extends Activity{
 		
 		Receipt receipt = (Receipt) in.getSerializableExtra("receipt");
 		setInfo(receipt);
-
 	}
 	
+	/**
+	 * Get all the required information about the receipt and set that information
+	 * to the layout that is shown for this activity.
+	 * @param receipt 
+	 */
 	public void setInfo(Receipt receipt){
 		Article articles[] = receipt.getArticles();
 		
+		//find the textviews in the activity_viewreceipt.xml file
 		TextView company = (TextView) findViewById(R.id.compName);
 	    TextView date = (TextView) findViewById(R.id.receiptDate);
 	    TextView receiptID = (TextView) findViewById(R.id.receiptID);
@@ -31,6 +40,7 @@ public class ViewReceipt extends Activity{
 	    TextView sellerID = (TextView) findViewById(R.id.sellerId);
 	    TextView terminalID = (TextView) findViewById(R.id.terminalId);
 	    
+	    //set text to the textviews.
 		company.setText(receipt.getCompany());
 		date.setText(receipt.getDate());
 		receiptID.setText("Kvitto: " + String.valueOf(receipt.getID()));
@@ -39,6 +49,7 @@ public class ViewReceipt extends Activity{
 		sellerID.setText("Säljare: " + receipt.getSellerID());
 		terminalID.setText("Kassa: " + receipt.getTerminalID());
 		
+		//set the layout of the listview.
 		ListView lv = (ListView) findViewById(R.id.receiptArticle);
         lv.setAdapter(new ArticleAdapter (this, articles));
 	}
