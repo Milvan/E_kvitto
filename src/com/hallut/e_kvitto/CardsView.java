@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * Activity which displays a list of credit cards which the current user has registered. 
@@ -39,6 +40,7 @@ public class CardsView extends Activity {
                
         		CreditCard card = (CreditCard) arg0.getItemAtPosition(position);
                 HomeBackend.getHomeBackend().setCurrentCard(card);
+                Toast.makeText(getApplicationContext(), card.getType()+" valt", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

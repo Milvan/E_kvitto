@@ -73,7 +73,7 @@ public class Home extends Activity {
 			case R.id.my_receipts:
 				if(back.getCurrentCard()!=null){
 					if(Database.getDatabase().getReceipts(back.getCurrentCard()).size()<1){
-						Toast.makeText(getApplicationContext(), "Det finns inga kvitton pï¿½ valt kort", Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(), "Det finns inga kvitton på valt kort", Toast.LENGTH_LONG).show();
 					} else {
 						Intent receiptListScreen = new Intent(Home.this, ReceiptList.class);
 						startActivity(receiptListScreen);
@@ -86,7 +86,7 @@ public class Home extends Activity {
 				break;
 			case R.id.my_cards:
 				if(back.getUsersCards().size()<1){
-					Toast.makeText(getApplicationContext(), "Du har inga registrerade kort", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "Du har inga registrerade kort, vänligen kontakta din bank", Toast.LENGTH_LONG).show();
 				} else {
 					Intent creditCardScreen = new Intent(Home.this, CardsView.class);
 					startActivity(creditCardScreen);

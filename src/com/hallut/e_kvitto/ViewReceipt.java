@@ -46,7 +46,7 @@ public class ViewReceipt extends Activity{
 		receiptID.setText("Kvitto: " + String.valueOf(receipt.getID()));
 		totalsum.setText("Total: " + String.valueOf(receipt.getTotalSum() + " kr"));
 		time.setText("Tid: " + receipt.getTime());
-		sellerID.setText("SÃ¤ljare: " + receipt.getSellerID());
+		sellerID.setText("Säljare: " + receipt.getSellerID());
 		terminalID.setText("Kassa: " + receipt.getTerminalID());
 		
 		//set the layout of the listview.

@@ -50,7 +50,7 @@ public final class Database {
 	private void fillReceipts(){
 		CreditCard card = cards.get("123456789012").getFirst();
 		String date = "2014-04-22";
-		Article[] articles1 = new Article[]{new Article("MellanmjÃ¶lk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
+		Article[] articles1 = new Article[]{new Article("Mellanmjölk", 12.9 , 1.548), new Article("Gurka", 10.90, 1.308), new Article("Plastkasse", 2, 0.5)};
 		Article[] articles2 = new Article[]{new Article("SD kort 4GB", 499.0, 125.0)};
 		addReceipt(2833, "ICA Kvantum", date, "19:24", "282", "6293-012019", card, articles1);
 		addReceipt(2830, "Konsum", date, "19:00", "280", "6293-012010", card, articles1);
