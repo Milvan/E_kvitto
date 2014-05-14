@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.TextView;
 
+/**
+ * This is the activity where users authenticate. For now it's fake authentication and this should be replaced with real bankID.
+ * @author Marcus
+ *
+ */
 public class Authenticate extends Activity {
 	
 	private TextView mPassView;
@@ -21,6 +26,11 @@ public class Authenticate extends Activity {
 
 	}
 
+	/**
+	 * Takes in the view that was clicked in android view and performs actions depending on view Item.
+	 * Is called by android:onClick
+	 * @param arg The view that was clicked
+	 */
 	public void onClick(View arg){
 		switch(arg.getId()){
 		//Enter one case per button and control what to happen for each button.

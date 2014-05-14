@@ -2,6 +2,11 @@ package com.hallut.e_kvitto;
 
 import java.io.Serializable;
 
+/**
+ * This class represent a Credit card. It holds fields that a real credit card has.
+ * @author Marcus
+ *
+ */
 public class CreditCard implements Serializable{
 	private final String cardNumber, owner, company, type, bank;
 	private final int month, year, cvv;
@@ -22,14 +27,14 @@ public class CreditCard implements Serializable{
 	}
 	
 	/**
-	 * 
-	 * @param cardNumber
-	 * @param owner
-	 * @param month
-	 * @param year
-	 * @param cvv
+	 * Create a credit card object with given parameters.
+	 * @param cardNumber Card number
+	 * @param owner Owners name
+	 * @param month Month
+	 * @param year Year
+	 * @param cvv CVV
 	 * @param type E.g. Visa or Mastercard
-	 * @param bank
+	 * @param bank Bank, E.g. Nordea
 	 */
 	public CreditCard(String cardNumber, String owner, int month, int year, int cvv, String type, String bank){
 		this.cardNumber = cardNumber;
@@ -43,15 +48,16 @@ public class CreditCard implements Serializable{
 	}
 	
 	/**
+	 * Create a credit card object with given parameters.
 	 * 
-	 * @param cardNumber
-	 * @param owner
-	 * @param month
-	 * @param year
-	 * @param cvv
+	 * @param cardNumber Card number
+	 * @param owner Owners name
+	 * @param month Month
+	 * @param year Year
+	 * @param cvv CVV
 	 * @param type E.g. Visa or Mastercard
-	 * @param bank 
-	 * @param company
+	 * @param bank Bank, E.g. Nordea
+	 * @param company The company the card belongs to.
 	 */
 	public CreditCard(String cardNumber, String owner, int month, int year, int cvv, String type, String bank, String company){
 		this.cardNumber = cardNumber;

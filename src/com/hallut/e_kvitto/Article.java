@@ -8,6 +8,12 @@ public class Article implements Serializable{
 	private final String name;
 	private final double price, tax;
 
+	/**
+	 * Create an article
+	 * @param name Name of article
+	 * @param price The total price including tax
+	 * @param tax The tax sum of article
+	 */
 	public Article(String name, double price, double tax){
 		this.name = name;
 		this.price = price;
