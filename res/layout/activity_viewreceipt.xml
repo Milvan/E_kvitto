@@ -102,7 +102,7 @@
     <ListView
         android:id="@+id/receiptArticle"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="match_parent"
         android:paddingLeft="10dp" 
         android:listSelector="@android:color/transparent" >
         
