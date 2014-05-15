@@ -10,7 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * 
+ * This is the activity of the home screen. Handles the communication between user and
+ * backend. 
  *
  */
 public class Home extends Activity {

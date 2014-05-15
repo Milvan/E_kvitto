@@ -4,7 +4,16 @@ import java.util.EmptyStackException;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-
+/**
+ * There can only be one instance of this class. 
+ * The object is accessed through static method getHomeBackend()
+ * This object keeps track of current information like current selected creditcard
+ * the cards logged in user has.
+ * Also handles request to database for getting needed information.
+ * 
+ * @author Marcus
+ *
+ */
 public final class HomeBackend {
 
 	private static HomeBackend HB;

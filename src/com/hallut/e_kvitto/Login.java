@@ -164,7 +164,7 @@ public class Login extends Activity {
 	public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 		@Override
 		protected Boolean doInBackground(Void... params) {
-			// TODO: attempt authentication against a network service.
+			// TODO: attempt authentication/login against a network service.
 
 			try {
 				// Simulate network access.
@@ -173,8 +173,6 @@ public class Login extends Activity {
 				return false;
 			}
 			
-			//Authenticate
-
 			return true;
 		}
 

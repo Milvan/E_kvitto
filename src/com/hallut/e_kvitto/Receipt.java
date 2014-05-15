@@ -39,8 +39,7 @@ public class Receipt implements Serializable{
 		totalSum = totalSum();
 	}
 	
-	/**
-	 * 
+	/** 
 	 * @return total sum of all articles
 	 */
 	private double totalSum(){
@@ -114,6 +113,9 @@ public class Receipt implements Serializable{
 		return articles;
 	}
 	
+	/**
+	 * Returns a string representation of this Receipt.
+	 */
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
 		sb.append("Id: ");
